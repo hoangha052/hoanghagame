@@ -7,12 +7,15 @@
 //
 
 #import "F3HAppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation F3HAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Fabric with:@[[Crashlytics class]]];
     return YES;
 }
 							
